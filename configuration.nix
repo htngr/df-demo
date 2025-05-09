@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+
   programs.java = {
     enable = true;
     package = pkgs.jdk21; # Set default JDK
@@ -35,4 +36,3 @@
     sudo -u postgres psql -d postgres -c "ALTER USER postgres WITH PASSWORD '"$CODCHI_POSTGRES_PASSWORD"';"
   '';
 }
-
